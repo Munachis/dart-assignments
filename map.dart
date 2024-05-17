@@ -1,5 +1,5 @@
 import 'dart:ffi';
-
+import 'dart:core';
 
 void main() {
   Map<String, String> users = {};
@@ -33,9 +33,9 @@ void main() {
 
 Map<String, int> findFrequency(List<String> words) {
   Map<String, int> frequencyMap = {};
-  Set<String> unique words = words.toSet
+   Set<String> uniqueWords = words.toSet();
 
-  for (String word in words) {
+  for (String word in uniqueWords) {
     if (frequencyMap.containsKey(word)) {
       frequencyMap[word] = frequencyMap[word]! + 1;
     } else {
